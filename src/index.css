@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: #1A1919;
+  color: #ffffff;
+  font-family: 'Rajdhani', sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #111010; }
+::-webkit-scrollbar-thumb { background: #E8243C; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #C01A2F; }
+
+input::placeholder { color: #8A8585; }
+input:focus { outline: none; }
+
+@layer components {
+  .container-arena {
+    @apply max-w-content mx-auto px-6 lg:px-10;
+  }
+  .eyebrow {
+    @apply font-rajdhani text-arena-red text-sm font-bold tracking-[0.2em] uppercase;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center bg-arena-red hover:bg-arena-red-dark text-white
+           font-orbitron font-bold text-xs px-7 py-3 tracking-widest uppercase rounded-sm
+           transition-all duration-300 hover:shadow-lg hover:shadow-arena-red/30;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center border border-white/40 hover:border-white text-white
+           font-orbitron font-bold text-xs px-7 py-3 tracking-widest uppercase rounded-sm
+           transition-all duration-300 hover:bg-white/5;
+  }
+}
